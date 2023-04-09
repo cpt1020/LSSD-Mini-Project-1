@@ -1,12 +1,12 @@
-# Mini Project 1 of Linux Systems and Software Development [CSIE6813] @ NCKU Fall 2023
+# Mini Project 1 of Linux Systems and Software Development [CSIE6813] @ NCKU Spring 2023
 
 ## Lab 1 - Customize Command Line Prompt
 
 Goals:
 
 1. Change the color of command line prompt from green to yellow.
-2. Extend the hostname in command line prompt with your studnet ID.
-3. Replace `$` with `#`.
+2. Extend the hostname in command line prompt with studnet ID.
+3. Replace `$` in command line prompt with `#`.
 
 ## Lab 2 - Shell Script
 
@@ -15,13 +15,13 @@ Decompress `Linux_Week5_Lab.zip`, which contains the following directories and f
 ```cmd!
 Linux_Week5_Lab/
 ├── compressed_files/
-│   └── /* contains 10000 .zip, .tar.gz, .rar, and .dika with the file name of student_id */
+│   └── /* contains 10000 .zip, .tar.gz, .rar, and .dika with the file name of student id */
 └── student_id
 ```
 
 Write a shell script that can perform the following tasks:
 
-1. create a `missing_list.txt` to list those student IDs that are listed in `student_id` but files with the student ID doesn't exist in the `compressed_files/`.
+1. create a `missing_list.txt` to list those student IDs that are listed in `student_id` but files with name of the student ID doesn't exist in the `compressed_files/`.
 2. create a `wrong_list.txt` to list those students who submited files in wrong file extension, that is `.dika` file.
 3. create `zip`, `rar`, `tar.gz`, and `unknown` folders under the `compressed_files` directory, and move `.zip`, `.rar`, `.tar.gz`, and `.dika` to those folders, respectively
 4. Decompress `.zip`, `.rar`, and `.tar.gz`.
@@ -85,7 +85,7 @@ Modify `/etc/hosts`:
 $ sudo vim /etc/hosts
 ```
 
-Lastly, restart your computer
+Lastly, restart computer
 
 ### Replace `$` with `#`
 
@@ -109,7 +109,7 @@ if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]# '
 ```
 
-Execute the following command and the color of command line prompt will change immediately
+Execute the following command and the command line prompt will change immediately
 
 ```cmd
 $ source ~/.bashrc
